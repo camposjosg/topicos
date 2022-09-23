@@ -55,7 +55,7 @@ public class GUI {
 
     private void initTextBox() {
         textoPlano.setBounds(100, 150, 300, 300);
-        textoPlano.setBackground(Color.cyan);
+        textoPlano.setBackground(Color.white);
         textoPlano.setLineWrap(true);
         textoPlano.setWrapStyleWord(true);
         textoPlano.setFont(new Font("Monospace", Font.PLAIN, 16));
