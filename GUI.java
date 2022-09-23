@@ -54,14 +54,14 @@ public class GUI {
     }
 
     private void initTextBox() {
-        textoPlano.setBounds(100, 150, 300, 300);
+        textoPlano.setBounds(30, 50, 400, 100);
         textoPlano.setBackground(Color.white);
         textoPlano.setLineWrap(true);
         textoPlano.setWrapStyleWord(true);
         textoPlano.setFont(new Font("Monospace", Font.PLAIN, 16));
 
         textoCifrado.setBounds(600, 150, 300, 300);
-        textoCifrado.setBackground(Color.red);
+        textoCifrado.setBackground(Color.cyan);
         textoCifrado.setLineWrap(true);
         textoCifrado.setWrapStyleWord(true);
         textoCifrado.setFont(new Font("Monospace", Font.PLAIN, 16));
@@ -71,11 +71,11 @@ public class GUI {
 
     private void initButtons() {
         botonEncriptar.setText("CIFRAR");
-        botonEncriptar.setFont(new Font("Arial", Font.BOLD, 18));
-        botonEncriptar.setBounds(450, 250, 200, 50);
+        botonEncriptar.setFont(new Font("Arial", Font.BOLD, 12));
+        botonEncriptar.setBounds(450, 250, 100, 50);
 
         botonDesencriptar.setText("DESCRIFRAR");
-        botonDesencriptar.setFont(new Font("Arial", Font.BOLD, 24));
+        botonDesencriptar.setFont(new Font("Arial", Font.BOLD, 12));
         botonDesencriptar.setBounds(450, 350, 100, 50);
 
         botonCargarPlano.setText("Cargar");
@@ -99,7 +99,7 @@ public class GUI {
 
         labelPlano.setText("Plano");
         labelPlano.setFont(new Font("Arial", Font.BOLD, 18));
-        labelPlano.setBounds(100, 100, 300, 50);
+        labelPlano.setBounds(100, 16, 300, 50);
         labelPlano.setHorizontalAlignment(JLabel.CENTER);
 
 
