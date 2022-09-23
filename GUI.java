@@ -9,7 +9,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.*;
 import java.awt.*;
-
+CADA QUE HAGA CAMBIOS APARECEN AQUI
 public class GUI {
 
     JFrame ventana = new JFrame();
