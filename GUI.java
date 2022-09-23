@@ -10,6 +10,8 @@ import javax.swing.JTextArea;
 import javax.swing.*;
 import java.awt.*;
 //¿Se puede ver?
+
+//Y si, lo edito de aquí, también se ve? 
 public class GUI {
 
     JFrame ventana = new JFrame();
