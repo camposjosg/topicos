@@ -9,7 +9,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.*;
 import java.awt.*;
-
+//¿Se puede ver?
 public class GUI {
 
     JFrame ventana = new JFrame();
