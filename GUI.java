@@ -9,7 +9,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.*;
 import java.awt.*;
-SE VEN EN ANDROID?
+
 public class GUI {
 
     JFrame ventana = new JFrame();
