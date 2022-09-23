@@ -9,9 +9,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.*;
 import java.awt.*;
-CADA QUE HAGA CAMBIOS APARECEN AQUI
 
-O AQUI EN SU DEFECTO
 public class GUI {
 
     JFrame ventana = new JFrame();
