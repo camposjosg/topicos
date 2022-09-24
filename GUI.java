@@ -29,31 +29,31 @@ public class GUI {
     Controller manejador = new Controller();
 
     public GUI() {
-        initFrame();
-        initPanel();
-        initTextBox();
-        initButtons();
-        initLabels();
+        cuadro();
+        panel();
+        cajaDeTexto();
+        botones();
+        etiquetas();
         eventos();
 
         addComponents();
     }
 
-    private void initFrame() {
+    private void cuadro() {
         ventana.setTitle("CifradoIrving");
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        ventana.setSize(1000, 600);
+        ventana.setSize(1000, 450);
         ventana.setLocationRelativeTo(null);
         ventana.setResizable(false);
 
         ventana.setVisible(true);
     }
 
-    private void initPanel() {
+    private void panel() {
         panel.setLayout(null);
     }
 
-    private void initTextBox() {
+    private void cajaDeTexto() {
         textoPlano.setBounds(30, 50, 925, 100);
         textoPlano.setBackground(Color.white);
         textoPlano.setLineWrap(true);
@@ -69,7 +69,7 @@ public class GUI {
     }
 
 
-    private void initButtons() {
+    private void botones() {
         botonEncriptar.setText("CIFRAR");
         botonEncriptar.setFont(new Font("Arial", Font.BOLD, 12));
         botonEncriptar.setBounds(855, 150, 100, 50);
@@ -91,7 +91,7 @@ public class GUI {
         botonGuardarEncriptado.setBounds(160, 340, 120, 30);
     }
 
-    private void initLabels() {
+    private void etiquetas() {
         labelPlano.setText("Plano");
         labelPlano.setFont(new Font("Arial", Font.BOLD, 18));
         labelPlano.setBounds(-95, 10, 300, 50);
