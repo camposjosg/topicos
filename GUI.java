@@ -79,16 +79,16 @@ public class GUI {
         botonDesencriptar.setBounds(805, 340, 150, 50);
 
         botonCargarPlano.setText("Cargar");
-        botonCargarPlano.setBounds(120, 480, 120, 30);
+        botonCargarPlano.setBounds(29, 150, 120, 30);
 
         botonGuardarPlano.setText("Guardar");
-        botonGuardarPlano.setBounds(260, 480, 120, 30);
+        botonGuardarPlano.setBounds(160, 150, 120, 30);
 
         botonCargarEncriptado.setText("Cargar");
-        botonCargarEncriptado.setBounds(620, 480, 120, 30);
+        botonCargarEncriptado.setBounds(29, 340, 120, 30);
 
         botonGuardarEncriptado.setText("Guardar");
-        botonGuardarEncriptado.setBounds(760, 480, 120, 30);
+        botonGuardarEncriptado.setBounds(160, 340, 120, 30);
     }
 
     private void initLabels() {
