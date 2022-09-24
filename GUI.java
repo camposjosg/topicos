@@ -54,13 +54,13 @@ public class GUI {
     }
 
     private void initTextBox() {
-        textoPlano.setBounds(30, 50, 400, 100);
+        textoPlano.setBounds(30, 50, 925, 100);
         textoPlano.setBackground(Color.white);
         textoPlano.setLineWrap(true);
         textoPlano.setWrapStyleWord(true);
         textoPlano.setFont(new Font("Monospace", Font.PLAIN, 16));
 
-        textoCifrado.setBounds(600, 150, 300, 300);
+        textoCifrado.setBounds(30, 240, 925, 100);
         textoCifrado.setBackground(Color.cyan);
         textoCifrado.setLineWrap(true);
         textoCifrado.setWrapStyleWord(true);
@@ -72,11 +72,11 @@ public class GUI {
     private void initButtons() {
         botonEncriptar.setText("CIFRAR");
         botonEncriptar.setFont(new Font("Arial", Font.BOLD, 12));
-        botonEncriptar.setBounds(450, 250, 100, 50);
+        botonEncriptar.setBounds(855, 150, 100, 50);
 
         botonDesencriptar.setText("DESCRIFRAR");
         botonDesencriptar.setFont(new Font("Arial", Font.BOLD, 12));
-        botonDesencriptar.setBounds(450, 350, 100, 50);
+        botonDesencriptar.setBounds(805, 340, 150, 50);
 
         botonCargarPlano.setText("Cargar");
         botonCargarPlano.setBounds(120, 480, 120, 30);
@@ -92,20 +92,15 @@ public class GUI {
     }
 
     private void initLabels() {
-        /*lblTitle.setText("Cifrado Vigenere");
-        lblTitle.setFont(new Font("Times New Roman", Font.BOLD, 36));
-        lblTitle.setBounds(100, 10, 800, 100);
-        lblTitle.setHorizontalAlignment(JLabel.CENTER);*/
-
         labelPlano.setText("Plano");
         labelPlano.setFont(new Font("Arial", Font.BOLD, 18));
-        labelPlano.setBounds(100, 16, 300, 50);
+        labelPlano.setBounds(-95, 10, 300, 50);
         labelPlano.setHorizontalAlignment(JLabel.CENTER);
 
 
         labelEncriptado.setText("Cifrado");
         labelEncriptado.setFont(new Font("Arial", Font.BOLD, 18));
-        labelEncriptado.setBounds(600, 100, 300, 50);
+        labelEncriptado.setBounds(-87, 200, 300, 50);
         labelEncriptado.setHorizontalAlignment(JLabel.CENTER);
 
         panelDeslizable.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
