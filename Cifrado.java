@@ -1,4 +1,4 @@
-public class Vigenere {
+public class Cifrado {
 
     public static String cifrar(String textoPlano) {
         
@@ -11,12 +11,11 @@ public class Vigenere {
             String aux_2 = "";
             String aux_3 = "";
 
-            // Iteramos cada letra de la palabra
-            // Y si es asi le aumetamos 3 ascci a la derecha
+        
             for (int j = 0; j < frases[i].length(); j++) {
                 ascciAux = (int) frases[i].charAt(j);
 
-                //Verificar si es letra mayuscula o minuscula
+              
                 if ((ascciAux >= 65 && ascciAux <= 90)
                         || (ascciAux >= 97 && ascciAux <= 122)) {
                     aux_1 += (char) ((int) frases[i].charAt(j) + 3);
@@ -25,8 +24,7 @@ public class Vigenere {
                 }
             }
 
-            // Despues a la mitad de la frase se le desplaza
-            // una posicion ascci a al izquierda
+        
             aux_1 = truncado(aux_1);
             aux_2 = aux_1.substring((int) aux_1.length() / 2);
 
@@ -34,21 +32,20 @@ public class Vigenere {
                 aux_3 += (char) ((int) aux_2.charAt(k) - 1);
             }
 
-            // Calcular texto cifrado
+          
             cifrado += aux_1.substring(0, (int) aux_1.length() / 2);
             cifrado += aux_3 + " ";
         }
         return cifrado;
     }
     
-    // Haremos el proceso inverso para decifrar
+   
     public static String decifrar(String textoCifrado) {
-        // Separamos cada palabra del texto
+      
         String[] frases = textoCifrado.trim().split("\\ ");
         String decifrado = " ";
         int ascciAux;
 
-        // Iteraremos cada frase
         for (int i = 0; i < frases.length; i++) {
             String aux_1 = "";
             String aux_2 = "";
@@ -77,13 +74,13 @@ public class Vigenere {
             }
 
             decifrado += " ";
-        }// Cada frase
+        }
 
-        //System.out.println(decifrado);
+
         return decifrado;
     }
 
-    // Invertir String
+
     public static String truncado(String cadena) {
         String cadenaInvertida = "";
         for (int x = cadena.length() - 1; x >= 0; x--) {

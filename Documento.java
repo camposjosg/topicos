@@ -8,7 +8,7 @@ import java.io.IOException;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-public class Archivo {
+public class Documento {
 
     public String ver(File archivo) throws FileNotFoundException, IOException {
         BufferedReader obj = new BufferedReader(new FileReader(archivo));
@@ -28,8 +28,8 @@ public class Archivo {
         JFileChooser elegirArchivo = new JFileChooser();
         elegirArchivo.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
 
-        FileNameExtensionFilter imgFilter = new FileNameExtensionFilter(categoria, extension);
-        elegirArchivo.setFileFilter(imgFilter);
+        FileNameExtensionFilter txtFiltro = new FileNameExtensionFilter(categoria, extension);
+        elegirArchivo.setFileFilter(txtFiltro);
 
         int result = elegirArchivo.showOpenDialog(null);
 
@@ -44,7 +44,6 @@ public class Archivo {
                 try {
                     return this.ver(fileName);
                 } catch (IOException ex) {
-                    //Logger.getLogger(Archivo.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
         }
@@ -55,8 +54,8 @@ public class Archivo {
         JFileChooser elegirArchivo = new JFileChooser();
         elegirArchivo.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
 
-        FileNameExtensionFilter imgFilter = new FileNameExtensionFilter(categoria, extension);
-        elegirArchivo.setFileFilter(imgFilter);
+        FileNameExtensionFilter txtFiltro = new FileNameExtensionFilter(categoria, extension);
+        elegirArchivo.setFileFilter(txtFiltro);
 
         int result = elegirArchivo.showSaveDialog(null);
 
@@ -76,7 +75,7 @@ public class Archivo {
 
     public static int escribir(File archivo, String contenido, String extension) {
         try {
-            // Si el archivo existe regresa un 1
+       
             if (archivo.exists()) {
                 return 1;
             }

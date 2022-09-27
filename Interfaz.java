@@ -10,7 +10,7 @@ import javax.swing.JTextArea;
 import javax.swing.*;
 import java.awt.*;
 
-public class GUI {
+public class Interfaz {
 
     JFrame ventana = new JFrame();
     JPanel panel = new JPanel();
@@ -28,7 +28,7 @@ public class GUI {
     JLabel labelEncriptado = new JLabel();
     Controller controlador = new Controller();
 
-    public GUI() {
+    public Interfaz() {
         cuadro();
         panel();
         cajaDeTexto();
