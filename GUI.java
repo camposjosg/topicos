@@ -26,7 +26,7 @@ public class GUI {
     JLabel labelTitulo = new JLabel();
     JLabel labelPlano = new JLabel();
     JLabel labelEncriptado = new JLabel();
-    Controller manejador = new Controller();
+    Controller controlador = new Controller();
 
     public GUI() {
         cuadro();
@@ -130,27 +130,27 @@ public class GUI {
     // importar texto plano
     public void eventos() {
         botonCargarPlano.addActionListener((ActionEvent e) -> {
-            textoPlano.setText(manejador.openFileTextPlain());
+            textoPlano.setText(controlador.openFileTextPlain());
         });
 
         botonCargarEncriptado.addActionListener((ActionEvent e) -> {
-            textoCifrado.setText(manejador.openFileCifrado());
+            textoCifrado.setText(controlador.openFileCifrado());
         });
 
         botonGuardarPlano.addActionListener((ActionEvent e) -> {
-            manejador.guardarPlano(textoPlano.getText());
+            controlador.guardarPlano(textoPlano.getText());
         });
 
         botonGuardarEncriptado.addActionListener((ActionEvent e) -> {
-            manejador.guardarEncriptado(textoCifrado.getText());
+            controlador.guardarEncriptado(textoCifrado.getText());
         });
 
         botonEncriptar.addActionListener((ActionEvent e) -> {
-            textoCifrado.setText(manejador.cifrarTexto(textoPlano.getText()));
+            textoCifrado.setText(controlador.cifrarTexto(textoPlano.getText()));
         });
 
         botonDesencriptar.addActionListener((ActionEvent e) -> {
-            textoPlano.setText(manejador.decifrarTexto(textoCifrado.getText()));
+            textoPlano.setText(controlador.decifrarTexto(textoCifrado.getText()));
         });
     }
 

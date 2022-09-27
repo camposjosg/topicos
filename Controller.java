@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 
 public class Controller {
 
-    public String abrirTextoPlano() {
+    public String openFileTextPlain() {
         return new Archivo().importar("txt", ".txt");
     }
     
