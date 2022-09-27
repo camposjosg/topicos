@@ -121,7 +121,7 @@ public class GUI {
         panel.add(labelTitulo);
         panel.add(labelPlano);
         panel.add(labelEncriptado);
-PRUEBA DESDE LA LAP PARA VISUALIZAR EN LA DESK
+
 
         ventana.add(panel);
     }
