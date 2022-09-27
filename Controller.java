@@ -3,11 +3,11 @@ import javax.swing.JOptionPane;
 public class Controller {
 
     public String openFileTextPlain() {
-        return new Archivo().importar("txt", ".txt");
+        return new Archivo().importar(".txt", ".txt");
     }
     
     public String openFileCifrado(){
-        return new Archivo().importar("Cifrado vigenere", ".vge");
+        return new Archivo().importar(".vge", ".vge");
     }
 
     public String cifrarTexto(String textoPlano) {
@@ -20,7 +20,7 @@ public class Controller {
 
     public void guardarPlano(String textoPlano) {
 
-        int r = new Archivo().guardar("Texto Plano" ,".txt", textoPlano);
+        int r = new Archivo().guardar(".txt" ,".txt", textoPlano);
         if (r == 1) {
             JOptionPane.showMessageDialog(null, "Ya existe un archivo con ese nombre",
                     "Archivo ya existe", JOptionPane.ERROR_MESSAGE);
@@ -30,9 +30,9 @@ public class Controller {
         }
     }
 
-    public void guardarEncriptado(String textoCidrado) {
+    public void guardarEncriptado(String textoCifrado) {
         int r = 0;
-        r = new Archivo().guardar("cifrado", "vge", textoCidrado);
+        r = new Archivo().guardar(".vge", "vge", textoCifrado);
         if (r == 1) {
             JOptionPane.showMessageDialog(null, "Ya existe un archivo con ese nombre",
                     "Archivo ya existe", JOptionPane.ERROR_MESSAGE);

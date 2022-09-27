@@ -1,12 +1,11 @@
 public class Vigenere {
 
     public static String cifrar(String textoPlano) {
-        // Separamos cada palabra del texto
-        String[] frases = textoPlano.trim().split(" ");
-        String cifrado = "";
-        int ascciValAux;
+        
+        String[] frases = textoPlano.trim().split("\\ ");
+        String cifrado = " ";
+        int ascciAux;
 
-        // Iteraremos cada frase
         for (int i = 0; i < frases.length; i++) {
             String aux_1 = "";
             String aux_2 = "";
@@ -15,11 +14,11 @@ public class Vigenere {
             // Iteramos cada letra de la palabra
             // Y si es asi le aumetamos 3 ascci a la derecha
             for (int j = 0; j < frases[i].length(); j++) {
-                ascciValAux = (int) frases[i].charAt(j);
+                ascciAux = (int) frases[i].charAt(j);
 
                 //Verificar si es letra mayuscula o minuscula
-                if ((ascciValAux >= 65 && ascciValAux <= 90)
-                        || (ascciValAux >= 97 && ascciValAux <= 122)) {
+                if ((ascciAux >= 65 && ascciAux <= 90)
+                        || (ascciAux >= 97 && ascciAux <= 122)) {
                     aux_1 += (char) ((int) frases[i].charAt(j) + 3);
                 } else {
                     aux_1 += frases[i].charAt(j);
@@ -38,18 +37,16 @@ public class Vigenere {
             // Calcular texto cifrado
             cifrado += aux_1.substring(0, (int) aux_1.length() / 2);
             cifrado += aux_3 + " ";
-        }// Cada frase
-
-        //System.out.println(cifrado);
+        }
         return cifrado;
     }
     
     // Haremos el proceso inverso para decifrar
     public static String decifrar(String textoCifrado) {
         // Separamos cada palabra del texto
-        String[] frases = textoCifrado.trim().split(" ");
-        String decifrado = "";
-        int ascciValAux;
+        String[] frases = textoCifrado.trim().split("\\ ");
+        String decifrado = " ";
+        int ascciAux;
 
         // Iteraremos cada frase
         for (int i = 0; i < frases.length; i++) {
@@ -69,10 +66,10 @@ public class Vigenere {
             aux_3 = truncado(aux_3);
 
             for (int j = 0; j < aux_3.length(); j++) {
-                ascciValAux = (int) aux_3.charAt(j);
+                ascciAux = (int) aux_3.charAt(j);
                 
-                if ((ascciValAux >= 68 && ascciValAux <= 93)
-                        || (ascciValAux >= 97 && ascciValAux <= 125)) {
+                if ((ascciAux >= 68 && ascciAux <= 93)
+                        || (ascciAux >= 97 && ascciAux <= 125)) {
                     decifrado += (char) ((int) aux_3.charAt(j) - 3);
                 } else {
                     decifrado += aux_3.charAt(j);
