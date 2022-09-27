@@ -22,10 +22,10 @@ public class Controlador {
 
         int r = new Documento().guardar(".txt" ,".txt", textoPlano);
         if (r == 1) {
-            JOptionPane.showMessageDialog(null, "Ya existe un archivo con ese nombre",
+            JOptionPane.showMessageDialog(null, "Ya existe",
                     "Documento ya existe", JOptionPane.ERROR_MESSAGE);
         }else if(r == 0){
-            JOptionPane.showMessageDialog(null, "Documento guardado con exito",
+            JOptionPane.showMessageDialog(null, "Se guardó correctamente",
                     "Documento guardado", JOptionPane.INFORMATION_MESSAGE);
         }
     }
@@ -34,10 +34,10 @@ public class Controlador {
         int r = 0;
         r = new Documento().guardar(".vge", ".vge", textoCifrado);
         if (r == 1) {
-            JOptionPane.showMessageDialog(null, "Ya existe un archivo con ese nombre",
+            JOptionPane.showMessageDialog(null, "Ya existe",
                     "Documento ya existe", JOptionPane.ERROR_MESSAGE);
         }else if(r == 0){
-            JOptionPane.showMessageDialog(null, "Documento guardado con exito",
+            JOptionPane.showMessageDialog(null, "Se guardó correctamente",
                     "Documento guardado", JOptionPane.INFORMATION_MESSAGE);
         }
     }
