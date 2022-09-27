@@ -27,7 +27,7 @@ public class GUI {
     JLabel labelPlano = new JLabel();
     JLabel labelEncriptado = new JLabel();
     Controller manejador = new Controller();
-TEXTO DE PRUEBA
+
     public GUI() {
         cuadro();
         panel();
