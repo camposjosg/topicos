@@ -26,7 +26,7 @@ public class Interfaz {
     JLabel labelTitulo = new JLabel();
     JLabel labelPlano = new JLabel();
     JLabel labelEncriptado = new JLabel();
-    Controller controlador = new Controller();
+    Controlador controlador = new Controlador();
 
     public Interfaz() {
         cuadro();
@@ -155,6 +155,6 @@ public class Interfaz {
     }
 
     public static void main(String[] args) {
-        new GUI();
+        new Interfaz();
     }
 }
