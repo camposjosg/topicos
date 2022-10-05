@@ -125,7 +125,7 @@ public class Interfaz {
 
         ventana.add(panel);
     }
-
+Es una prueba!!!!!
     // Eventos
     // importar texto plano
     public void eventos() {
