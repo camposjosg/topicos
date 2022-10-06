@@ -7,8 +7,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.*;
-import java.awt.*;
+
 
 public class Interfaz {
 
@@ -125,7 +124,6 @@ public class Interfaz {
 
         ventana.add(panel);
     }
-Es una prueba!!!!!
     // Eventos
     // importar texto plano
     public void eventos() {
