@@ -3,6 +3,7 @@ import java.awt.Color;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JButton;
 
 public class GUI {
 
@@ -11,25 +12,29 @@ public class GUI {
         
 
         JFrame ventana = new JFrame("Login para apps");
-        JLabel panelN = new JLabel();
-        JLabel panelS = new JLabel();
-        JLabel panelE = new JLabel();
-        JLabel panelO = new JLabel();
-        JLabel panelC = new JLabel();
+        JButton panelN = new JButton("Norte");
+        JButton panelS = new JButton("Sur");
+        JButton panelE = new JButton("Este");
+        JLabel panelO = new JLabel("Oeste");
+        JLabel panelC = new JLabel("Centro");
+        JButton panelON = new JButton("Oeste Norte");
 
-        panelN.setBackground(Color.BLUE);
+        panelO.setBackground(Color.BLUE);
+        panelO.add(panelON, BorderLayout.NORTH);
 
-       
-
-        ventana.add(panelN, BorderLayout.NORTH);
-        ventana.add(panelS, BorderLayout.SOUTH);
-        ventana.add(panelE, BorderLayout.EAST);
+        //ventana.add(panelN, BorderLayout.NORTH);
+        //ventana.add(panelS, BorderLayout.SOUTH);
+        //ventana.add(panelE, BorderLayout.EAST);
         ventana.add(panelO, BorderLayout.WEST);
         ventana.add(panelC, BorderLayout.CENTER);
 
-        ventana.setSize(900, 600);
+        
+
+
+        ventana.setSize(500, 500);
         ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ventana.setVisible(true);
+        ventana.setResizable(false);
 
     }
 }
