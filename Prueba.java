@@ -11,7 +11,7 @@ JButton boton1;
     setLayout(null);
 
     //Tamaño de la ventana
-    setBounds((0,0,450,350);
+    setSize(400,500);
 
     //Título
     setTitle("Ejemplo 1: Botón");
