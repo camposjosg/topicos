@@ -1,32 +1,41 @@
 import java.awt.*;
 import javax.swing.*;
+import java.awt.event.*;
 
 
-public class GUI {
+public class GUI extends JFrame implements ActionListener {
 
-    public static void main (String[]args){
 
-        JButton btn1 = new JButton("Ingresar");
-        JButton btn2 = new JButton("Crear usuario");
-        JLabel etiqueta1 = new JLabel("IrvBook");
-        JLabel etiqueta2 = new JLabel("¿Listo para navegar?");
-        //JTextField campo = new JTextField("Adios..", 12);
-        JFrame ventana = new JFrame();
-
-        ventana.setTitle("IrvBook");
-        ventana.setSize(400,300);
-        ventana.setLocationRelativeTo(null);
-        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        ventana.setVisible(true);
+    private JButton btn1 = new JButton("Ingresar");
+    private JButton btn2 = new JButton("Crear usuario");
+    private JLabel etiqueta1 = new JLabel("IrvBook");
+    //JTextField campo = new JTextField("Adios..", 12);
+    
+    public GUI(){
+    this.setLayout(new FlowLayout(FlowLayout.LEFT, 50,20));
+    this.setSize(250,150);
+    this.setTitle("IrvBook");
+    this.setLocationRelativeTo(null);
+    this.setResizable(false);
+    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    
+    this.add(btn1);
+    this.add(btn2);
         
-        ventana.setLayout(new FlowLayout(FlowLayout.LEFT, 150,20) );
-       
-        ventana.add(etiqueta1);
-        ventana.add(etiqueta2);
-        ventana.add(btn1);
-        ventana.add(btn2);
-        
+    this.setVisible(true);
+}
 
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource()==btn1) {
+          setTitle("boton 1");
+        }
+        if (e.getSource()==btn2) {
+          setTitle("boton 2");
+        }
+      }
+
+        public static void main(String[] args) {
+            new GUI();
+  
     }
-
 }
