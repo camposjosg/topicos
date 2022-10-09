@@ -1,29 +1,29 @@
 import java.awt.*;
-import javax.swing.*;
 import java.awt.event.*;
+import javax.swing.*;
+
 
 public class LoginIrving extends JFrame implements ActionListener{
 
   private JButton boton1,boton2,boton3;
-  private BorderLayout border1;
+  private JTextField etiqueta1, etiqueta2;
 
   public LoginIrving(){
     
     initDisplay();
+    initEtiquetas();
     initBotones();
     initAcciones();
     initHovers();
     initPantalla();
-    
 
   }
 
     private void initPantalla(){
-      
-      setLayout(new GridLayout());
+
+      setLayout(new GridLayout(10, 1, 1, 10));
       setSize(500, 500);
-      setTitle("Ejemplo 2: Botones");
-      setResizable(true);
+      setTitle("LoginIrving");
       setDefaultCloseOperation(EXIT_ON_CLOSE);
       setVisible(true);
       
@@ -34,22 +34,35 @@ public class LoginIrving extends JFrame implements ActionListener{
     }
 
     private void initBotones(){
-
+      
       boton1=new JButton("1");
-      boton1.setSize(50,10);
-      add(boton1, BorderLayout.NORTH);
+      setSize(10,10);
+      add(boton1);
       boton1.addActionListener(this);
       
       boton2=new JButton("2");
-      boton2.setSize(50,10);
-      add(boton2, BorderLayout.CENTER);
+      setSize(10,10);
+      add(boton2);
       boton2.addActionListener(this);
 
       boton3=new JButton("3");
-      boton3.setSize(50,10);
-      add(boton3, BorderLayout.SOUTH);
+      setSize(10,10);
+      add(boton3);
       boton3.addActionListener(this);
       
+    }
+    private void initEtiquetas(){
+
+      etiqueta1=new JTextField("Usuario");
+      setSize(10,10);
+      add(etiqueta1);
+      etiqueta1.addActionListener(this);
+
+      etiqueta2=new JTextField("Contraseña");
+      setSize(10,10);
+      add(etiqueta2);
+      etiqueta2.addActionListener(this);
+
     }
 
     private void initAcciones(){
@@ -60,12 +73,10 @@ public class LoginIrving extends JFrame implements ActionListener{
 
     }
 
-   
-  
-    
-
     public void actionPerformed(ActionEvent e) {
       if (e.getSource()==boton1) {
+        etiqueta1.setText("");
+        etiqueta2.setText("");
         setTitle("boton 1");
       }
       if (e.getSource()==boton2) {
