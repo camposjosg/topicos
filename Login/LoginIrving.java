@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-
+//PRUEBASINCRO
 public class LoginIrving extends JFrame implements ActionListener{
 
   private JButton boton1,boton2,boton3;
