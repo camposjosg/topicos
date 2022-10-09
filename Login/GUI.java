@@ -8,7 +8,6 @@ public class GUI extends JFrame implements ActionListener {
 
     private JButton btn1 = new JButton("Ingresar");
     private JButton btn2 = new JButton("Crear usuario");
-    private JLabel etiqueta1 = new JLabel("IrvBook");
     //JTextField campo = new JTextField("Adios..", 12);
     
     public GUI(){
