@@ -3,6 +3,14 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileReader;
+
 //PRUEBASINCRO
 public class LoginIrving extends JFrame implements ActionListener{
 
@@ -127,9 +135,62 @@ public class LoginIrving extends JFrame implements ActionListener{
       boton4.addActionListener(this);
       
     }
+    private void setModificar()
+   {
+      if (guardado.exists())
+      {
+         String clave = JOptionPane.showInputDialog("Dame clave a modificar");
+         try {
+            ArrayList<String> lineas = new ArrayList<>();
+            BufferedReader br = new BufferedReader(new FileReader(archivo));
+            String linea = br.readLine();
+            while (linea != null)
+            {
+               if (linea.startsWith(clave))
+               {
+                  int confirmar = JOptionPane.showConfirmDialog(null, "Se ha encontrado:\n"
+                        + linea + "\n¿Seguro que quiere modificar?", "Confirmar Modificacion", JOptionPane.YES_NO_OPTION);
+                  if (confirmar == JOptionPane.YES_OPTION)
+                  {
+                     lineas.add(getLineaModificada(linea));
+                  }
+                  else//No quiere modificar
+                     lineas.add(linea);
+               }
+               else//Linea no coincide con clave
+                  lineas.add(linea);
+               
+               linea = br.readLine();
+            }
+            br.close();
+            //Guardamos los cambios en el archivo.
+            if (archivo.delete())
+            {
+               BufferedWriter bw = new BufferedWriter(new FileWriter(archivo, true));
+               for (String line: lineas)
+               {
+                  bw.write(line);
+                  bw.newLine();
+               }
+               bw.close();
+               JOptionPane.showMessageDialog(null, "Los cambios se han guardado");
+            }
+            else//Por algun motivo, no se ha podido borrar el archivo
+            {
+               JOptionPane.showMessageDialog(null, "No se ha podido modificar el archivo: " + archivo.getAbsolutePath());
+            }
 
+         }catch(Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, e.getLocalizedMessage());
+         }
+      }
+      else//No existe archivo
+         JOptionPane.showMessageDialog(null, "No existe fichero: " + archivo.getAbsolutePath());
+   }
+   
     private void initAcciones(){
-
+      
     }
 
     private void initHovers(){
