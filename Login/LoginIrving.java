@@ -1,7 +1,8 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-
+import java.io.FileWriter;
+import java.io.IOException;
 //PRUEBASINCRO
 public class LoginIrving extends JFrame implements ActionListener{
 
@@ -88,6 +89,21 @@ public class LoginIrving extends JFrame implements ActionListener{
 
 
     }
+
+    private void Exportar() {
+      try {
+      JFileChooser archivo = new JFileChooser(System.getProperty("user.dir"));
+      archivo.showSaveDialog(this);
+      if (archivo.getSelectedFile() != null) {
+      try (FileWriter guardado = new FileWriter(archivo.getSelectedFile())) {
+      guardado.write(campo1.getText());
+      JOptionPane.showMessageDialog(rootPane, "El archivo fue guardado con éxito en la ruta establecida");
+      }
+      }
+      } catch (IOException ex) {
+      JOptionPane.showMessageDialog(this, ex.getMessage());
+      }
+      }
     private void initBotones(){
       
       boton1=new JButton("Iniciar sesión");
@@ -119,13 +135,18 @@ public class LoginIrving extends JFrame implements ActionListener{
     private void initHovers(){
 
     }
+ 
+  
+
 
     public void actionPerformed(ActionEvent e) {
       if (e.getSource()==boton1) {
         setTitle("boton 1");
+     
       }
       if (e.getSource()==boton2) {
         setTitle("boton 2");
+        Exportar();
       }
       if (e.getSource()==boton3) {
         setTitle("boton 3");
