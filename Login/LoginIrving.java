@@ -6,12 +6,16 @@ import javax.swing.*;
 public class LoginIrving extends JFrame implements ActionListener{
 
   private JButton boton1,boton2,boton3;
-  private JTextField etiqueta1, etiqueta2;
+  private JTextField campo1, campo2;
+  private JLabel etiqueta1, etiqueta2, etiqueta3, etiqueta4;
 
   public LoginIrving(){
     
     initDisplay();
     initEtiquetas();
+    initiCampo1();
+    initEtiquetas2();
+    initCampo2();
     initBotones();
     initAcciones();
     initHovers();
@@ -21,9 +25,9 @@ public class LoginIrving extends JFrame implements ActionListener{
 
     private void initPantalla(){
 
-      setLayout(new GridLayout(10, 1, 1, 10));
+      setLayout(new GridLayout(11, 1, 1, 10));
       setSize(500, 500);
-      setTitle("LoginIrving");
+      setTitle("LogIrving");
       setDefaultCloseOperation(EXIT_ON_CLOSE);
       setVisible(true);
       
@@ -33,6 +37,55 @@ public class LoginIrving extends JFrame implements ActionListener{
 
     }
 
+   
+
+    private void initEtiquetas(){
+
+      etiqueta1 = new JLabel();
+      etiqueta1.setText("Ingresa en los campos de texto de abajo"+
+      " un usuario y una contraseña");
+      setSize(10,10);
+      add(etiqueta1);
+
+      etiqueta2 = new JLabel();
+      etiqueta2.setText("después, con los botones, elige qué quieres hacer.");
+      setSize(10,10);
+      add(etiqueta2);
+
+      etiqueta3 = new JLabel();
+      etiqueta3.setText("Usuario:");
+      setSize(10,10);
+      add(etiqueta3);
+
+    }
+
+    private void initiCampo1(){
+
+      campo1=new JTextField("");
+      setSize(10,10);
+      add(campo1);
+      campo1.addActionListener(this);
+
+    }
+
+
+    private void initEtiquetas2(){
+
+      etiqueta4 = new JLabel();
+      etiqueta4.setText("Contraseña:");
+      setSize(10,10);
+      add(etiqueta4);
+    }
+
+    private void initCampo2(){
+
+      campo2=new JTextField("");
+      setSize(10,10);
+      add(campo2);
+      campo2.addActionListener(this);
+
+
+    }
     private void initBotones(){
       
       boton1=new JButton("1");
@@ -51,19 +104,6 @@ public class LoginIrving extends JFrame implements ActionListener{
       boton3.addActionListener(this);
       
     }
-    private void initEtiquetas(){
-
-      etiqueta1=new JTextField("Usuario");
-      setSize(10,10);
-      add(etiqueta1);
-      etiqueta1.addActionListener(this);
-
-      etiqueta2=new JTextField("Contraseña");
-      setSize(10,10);
-      add(etiqueta2);
-      etiqueta2.addActionListener(this);
-
-    }
 
     private void initAcciones(){
 
@@ -75,8 +115,8 @@ public class LoginIrving extends JFrame implements ActionListener{
 
     public void actionPerformed(ActionEvent e) {
       if (e.getSource()==boton1) {
-        etiqueta1.setText("");
-        etiqueta2.setText("");
+        campo1.setText("");
+        campo2.setText("");
         setTitle("boton 1");
       }
       if (e.getSource()==boton2) {
