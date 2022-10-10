@@ -6,7 +6,8 @@ import javax.swing.*;
 public class LoginIrving extends JFrame implements ActionListener{
 
   private JButton boton1,boton2,boton3,boton4;
-  private JTextField campo1, campo2;
+  private JTextField campo1;
+  private JPasswordField campo2;
   private JLabel etiqueta1, etiqueta2, etiqueta3, etiqueta4;
 
   public LoginIrving(){
@@ -79,7 +80,8 @@ public class LoginIrving extends JFrame implements ActionListener{
 
     private void initCampo2(){
 
-      campo2=new JTextField("");
+      campo2=new JPasswordField("");
+      campo2.setEchoChar('*');    
       setSize(10,10);
       add(campo2);
       campo2.addActionListener(this);
