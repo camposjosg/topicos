@@ -5,7 +5,7 @@ import javax.swing.*;
 //PRUEBASINCRO
 public class LoginIrving extends JFrame implements ActionListener{
 
-  private JButton boton1,boton2,boton3;
+  private JButton boton1,boton2,boton3,boton4;
   private JTextField campo1, campo2;
   private JLabel etiqueta1, etiqueta2, etiqueta3, etiqueta4;
 
@@ -88,20 +88,25 @@ public class LoginIrving extends JFrame implements ActionListener{
     }
     private void initBotones(){
       
-      boton1=new JButton("1");
+      boton1=new JButton("Iniciar sesión");
       setSize(10,10);
       add(boton1);
       boton1.addActionListener(this);
       
-      boton2=new JButton("2");
+      boton2=new JButton("Crear usuario");
       setSize(10,10);
       add(boton2);
       boton2.addActionListener(this);
 
-      boton3=new JButton("3");
+      boton3=new JButton("Eliminar usuario");
       setSize(10,10);
       add(boton3);
       boton3.addActionListener(this);
+
+      boton4=new JButton("Limpiar campos");
+      setSize(10,10);
+      add(boton4);
+      boton4.addActionListener(this);
       
     }
 
@@ -115,8 +120,6 @@ public class LoginIrving extends JFrame implements ActionListener{
 
     public void actionPerformed(ActionEvent e) {
       if (e.getSource()==boton1) {
-        campo1.setText("");
-        campo2.setText("");
         setTitle("boton 1");
       }
       if (e.getSource()==boton2) {
@@ -125,8 +128,11 @@ public class LoginIrving extends JFrame implements ActionListener{
       if (e.getSource()==boton3) {
         setTitle("boton 3");
       }
+      if (e.getSource()==boton4) {
+        campo1.setText("");
+        campo2.setText("");
     }
-
+  }
     public static void main(String[] args) {
 
       new LoginIrving();
